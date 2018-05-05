@@ -1,0 +1,193 @@
+/*
+Theme Name: Shri Somnath Dham Agra Site
+Author: Vijay/Sumit
+Description: This is a design created and licecend under name of Vijayraj Chandani, 
+he is also authoised to change/Alter this theme in later phases of the project
+Version: 1.0
+License: Vijayraj Chandani
+Text Domain: Shri Somnath Dham Agra Site(shrisomnathdham.com)
+Contact: vijayrajchandani@gmail.com
+*/
+
+/*Reset CSS starts*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Reset CSS ends*/
+
+
+
+/*Default Styles*/
+*,
+*::before,
+*::after{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body{
+	color: #fff;
+	line-height: 1.5;
+	font-family: sans-serif;
+	font-size: 16px;
+	background-color:#000;
+	text-align: center;
+}
+
+h1, h2, h3, h4{
+	line-height: 1.4;
+	text-shadow: 1px 1px 7px #000;
+}
+
+h1{
+	font-size: 2.2rem;
+	padding: 0.5em 0;
+	margin-bottom: 0.5em;
+
+}
+
+h2{
+	font-size: 1.6rem;
+	margin-bottom: 1em;
+	color: #b6dbf7;
+	text-align: center;
+}
+
+h2:after{
+	content: '';
+	width: 50px;
+	display: block;
+	margin: 0 auto;
+	border-bottom: 1px solid #187bcc;
+}
+
+input:not([type="submit"]),
+textarea,
+#image-upload{
+	display: block;
+	border: 1px solid #187bcc;
+	width: 100%;
+	padding: 0.5em 0.5em;
+	color: #fff;
+	font-size: 1.2rem;
+	background: transparent;
+	margin: 0 0 1em;
+}
+
+input[type="file"]{
+	display: none;
+}
+
+label{
+	margin: 0;
+	text-align: left;
+	color: #b6dbf7;
+	font-size: 1.2em;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255,255,255,0.3);
+    opacity: 1; /* Firefox */
+    font-size: 1em;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255,255,255,0.3);
+    font-size: 1em;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255,255,255,0.3);
+    font-size: 1em;
+}
+
+input[type="submit"]{
+	background: #fff;
+	color: #187bcc;
+	padding: 0.8em 1.6em;
+	border: 1px solid #187bcc;
+	box-shadow: 2px 2px 0 #187bcc;
+	font-size: 1.2rem;
+}
+
+/*Default classes*/
+
+.image-container{
+	background: #ccc url(../images/aum.jpg) center center;
+	background-size: cover;
+}
+
+.register{
+	background: rgb(0,0,0,0.6);
+	padding: 2em 3em;
+	width: 90%;
+	max-width: 700px;
+	margin: 0.5em auto;
+	text-align: left;
+}
+
+/*default IDs*/
+
+#image-upload{
+	position: relative;
+	color: rgba(255,255,255,0.3);
+}
+
+#image-upload button{
+	background: #fff;
+    display: inline;
+    color: #187bcc;
+    right: 0;
+    position: absolute;
+    top: 0;
+    padding: 0.63em 1.6em;
+    border: 1px solid #187bcc;
+    font-size: 1.2rem;
+}
