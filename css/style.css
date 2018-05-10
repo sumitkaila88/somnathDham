@@ -57,6 +57,8 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	background: #fff;
+	color: #000;
 }
 
 /*Reset CSS ends*/
@@ -77,7 +79,6 @@ body{
 	line-height: 1.5;
 	font-family: sans-serif;
 	font-size: 16px;
-	background-color:#000;
 	text-align: center;
 }
 
@@ -108,6 +109,10 @@ h2:after{
 	border-bottom: 1px solid #187bcc;
 }
 
+img{
+	max-width: 100%;
+}
+
 input:not([type="submit"]),
 textarea,
 #image-upload{
@@ -122,7 +127,12 @@ textarea,
 }
 
 input[type="file"]{
-	display: none;
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
 
 label{
@@ -148,13 +158,42 @@ label{
     font-size: 1em;
 }
 
-input[type="submit"]{
+input[type="submit"],
+a.generate-preview{
 	background: #fff;
 	color: #187bcc;
 	padding: 0.8em 1.6em;
 	border: 1px solid #187bcc;
 	box-shadow: 2px 2px 0 #187bcc;
 	font-size: 1.2rem;
+	transition: all 0.1s linear;
+}
+
+input[type="submit"]:active,
+a.generate-preview:active{
+	box-shadow: none;
+}
+
+a.generate-preview{
+	display: block;
+    width: 150px;
+    margin: 1em auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th{
+	font-weight: bold;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 0.2	em 0.8em;
+	background-color: #ccc;
 }
 
 /*Default classes*/
@@ -180,14 +219,110 @@ input[type="submit"]{
 	color: rgba(255,255,255,0.3);
 }
 
-#image-upload button{
+#image-upload span{
 	background: #fff;
     display: inline;
     color: #187bcc;
     right: 0;
     position: absolute;
     top: 0;
-    padding: 0.63em 1.6em;
+    cursor: pointer;
+    padding: 0.45em 1.6em;
     border: 1px solid #187bcc;
     font-size: 1.2rem;
+}
+
+
+.registered-list{
+	padding: 2em;
+}
+
+.data-table img{
+	width: 100%;
+	max-width: 100%;
+}
+
+.data-table td{
+	vertical-align: middle;
+	padding: 1em;
+}
+
+.data-table tr:nth-child(2n){
+	background-color: #eee;
+}
+
+.data-table td a{
+	text-decoration: none;
+}
+
+.id-container{
+	width: 320px;
+	border: 1px solid #187bcc;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.id-container img{
+	width: 50px;
+}
+
+.card{
+	display: table;
+	width: 100%;
+	margin-top: 2em;
+}
+
+.card img{
+	width: 100px;
+	margin-bottom: 2em;
+}
+
+.tr{
+	display: table-row;
+	text-align: left;
+}
+
+.tr label,
+.tr p,
+.tr img{
+	display: table-cell;
+	vertical-align: top;
+}
+
+.image-holder img{
+	margin-right: 2em;
+}
+
+#registered-list .details p{
+	color: #000;
+}
+
+.search-form{
+	padding-bottom: 90vh;
+}
+
+.links li{
+	display: inline-block;
+}
+
+.links a{
+	font-size: 1.2em;
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.2s linear;	
+}
+
+.links a:hover{
+	color: #b6dbf7;
+}
+
+.links a.new:after{
+	content: '\21B4';
+	margin-left: 0.5em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.links li:last-child{
+	float: right;
 }
