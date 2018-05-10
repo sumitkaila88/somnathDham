@@ -22,7 +22,7 @@
 					$search = $_POST["search"];
 					$sql="SELECT * FROM shivgoraksh WHERE Phone = $search";
 					$result = mysqli_query($conn,$sql);
-					if(mysqli_query($conn,$sql)){
+					if($result && mysqli_num_rows($result)>0){
 						while($row = mysqli_fetch_array($result)) {
 						        echo "<div class='id-container'><header>";
 								echo	"<p class='regard'>!!!Shiv Goraksh!!!</p>";

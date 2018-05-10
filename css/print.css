@@ -1,0 +1,43 @@
+.id-container label {
+    color: #000;
+}
+
+.id-container{
+	width: 300px;
+	border: 1px solid #187bcc;
+	color: #000;
+    text-align: center;
+}
+
+header{
+    width: 220px;
+    text-align: center;
+}
+
+header img{
+    width: 50px;
+}
+
+.card{
+	display: table;
+}
+
+.card img{
+	width: 100px;
+    margin-bottom: 10px;
+    object-fit: scale-down;
+    max-height: 80px;
+}
+
+.tr{
+	display: table-row;
+	text-align: left;
+}
+
+.tr label,
+.tr p,
+.tr img{
+	display: table-cell;
+	vertical-align: top;
+	padding: 1px 4px;
+}

@@ -34,7 +34,7 @@ $( document ).ready(function() {
 
 		newWin.document.open();
 
-		newWin.document.write('<html><body onload="window.print()">'+divToPrint[0].innerHTML+'</body></html>');
+		newWin.document.write('<html><link rel="stylesheet" href="css/print.css"><body onload="window.print()">'+divToPrint[0].innerHTML+'</body></html>');
 
 		newWin.document.close();
 
