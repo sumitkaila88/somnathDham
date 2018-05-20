@@ -25,10 +25,10 @@
 					if($result && mysqli_num_rows($result)>0){
 						while($row = mysqli_fetch_array($result)) {
 						        echo "<div class='id-container'><header>";
-								echo	"<p class='regard'>!!!Shiv Goraksh!!!</p>";
+								echo	"<p class='regard'>।। शिव गौरक्ष ।।</p>";
 								echo	"<img src='images/thakurnath.jpg' />";
 								echo	"<div class='welcome'>";
-								echo		"<p class='trustName'>Shri Somnath Dham Agra</p>";
+								echo		"<p class='trustName'>|| श्री सोमनाथ धाम, आगरा ||</p>";
 								echo	"</div>";
 								echo "</header>";
 								echo "<div class='card'>";

@@ -2,18 +2,13 @@
 
 	<!-- navigation will come here later -->
 	
-		
-		<article class="register">
-			<h2>Varshik Utsav Registration</h2>
-			<ul class="links">
-				<li><a href="" class="new">New User</a></li>
-				<li><a href="search" class="preregistered">Already registered ? Get ID card here</a></li>
-			</ul>
-			<div id="form-content">
-				<?php include_once 'form.php'; ?>
-			</div>
+		<?php include_once 'home.php'; ?>
 
-		</article>
+		<?php include_once 'about.php'; ?>
+
+		<?php include_once 'form.php'; ?>
+				
+		<?php include_once 'contact.php'; ?>
 		
 	
 
