@@ -411,7 +411,7 @@ header h1 img {
 }
 
 header h1 p {
-    display: inline-block;
+    display: none;
     vertical-align: middle;
     font-size: 0.8em;
 }
@@ -509,6 +509,9 @@ header nav {
 	}
 
 	.about section {
+		display: inline-block;
+	}
+	header h1 p{
 		display: inline-block;
 	}
 }
