@@ -9,6 +9,7 @@ $phone = $_POST["phone"];
 $adhaar = $_POST["adhaar"];
 $city = $_POST["city"];
 $address = $_POST["address"];
+$newfilename = $target_dir . $adhaar . '.' . $imageFileType;
 
 //
 
@@ -24,6 +25,10 @@ if(isset($_POST["submit"])) {
     }
 }
 
+if (file_exists($newfilename)) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+}
 // Check file size
 if ($_FILES["photo"]["size"] > 5000000) {
     echo "Sorry, your file is too large.";
@@ -40,7 +45,7 @@ if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
-    if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
+    if (move_uploaded_file($_FILES["photo"]["tmp_name"], $newfilename)) {
 
 		//connectiing database and inserting rows and file name
 
@@ -56,19 +61,19 @@ if ($uploadOk == 0) {
 		    die("Connection failed: " . mysqli_connect_error());
 		}
 
-		$sql = "INSERT INTO shivgoraksh(Name, Guardian, Phone, Adhaar, City, Address, Image) VALUES ('$name', '$guardian', '$phone', '$adhaar', '$city', '$address', '$target_file')";
+		$sql = "INSERT INTO shivgoraksh(Name, Guardian, Phone, Adhaar, City, Address, Image) VALUES ('$name', '$guardian', '$phone', '$adhaar', '$city', '$address', '$newfilename')";
 
 		if (mysqli_query($conn, $sql)) {
 		    echo "<div class='id-container'><header>";
-			echo	"<p class='regard'>!!!Shiv Goraksh!!!</p>";
+			echo	"<p class='regard'>।। शिव गौरक्ष ।।</p>";
 			echo	"<img src='images/thakurnath.jpg' />";
 			echo	"<div class='welcome'>";
-			echo		"<p class='trustName'>Shri Somnath Dham Agra</p>";
+			echo		"<p class='trustName'>|| श्री सोमनाथ धाम, आगरा ||</p>";
 			echo	"</div>";
 			echo "</header>";
 			echo "<div class='card'>";
 			echo	"<div class='tr'><label>ID:" . $adhaar . "</label>";
-			echo	"<img class = 'idcard' src = '" . $target_file . "' /></div>";
+			echo	"<img class = 'idcard' src = '" . $newfilename . "' /></div>";
 			echo	"<div class='tr'><label>Name:</label><p>" . $name . "</p></div>";
 			echo	"<div class='tr'><label>Father/Husband:</label><p>" . $guardian . "</p></div>";
 			echo	"<div class='tr'><label>Phone:</label><p>" . $phone . "</p></div>";

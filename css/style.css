@@ -7,6 +7,7 @@ Version: 1.0
 License: Vijayraj Chandani
 Text Domain: Shri Somnath Dham Agra Site(shrisomnathdham.com)
 Contact: vijayrajchandani@gmail.com
+Start Date: 01-April-2018
 */
 
 /*Reset CSS starts*/
@@ -75,16 +76,15 @@ table {
 }
 
 body{
-	color: #fff;
+	color: #000;
 	line-height: 1.5;
-	font-family: sans-serif;
+	font-family: "Roboto", "Helvetica Neue", sans-serif;
 	font-size: 16px;
-	text-align: center;
+	background: #fff url(../images/aum.png) repeat;
 }
 
 h1, h2, h3, h4{
 	line-height: 1.4;
-	text-shadow: 1px 1px 7px #000;
 }
 
 h1{
@@ -97,7 +97,7 @@ h1{
 h2{
 	font-size: 1.6rem;
 	margin-bottom: 1em;
-	color: #b6dbf7;
+	color: #40b3d6;
 	text-align: center;
 }
 
@@ -106,7 +106,33 @@ h2:after{
 	width: 50px;
 	display: block;
 	margin: 0 auto;
-	border-bottom: 1px solid #187bcc;
+	border-bottom: 1px solid #fdb970;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li.noBorder:before {
+    content: '';
+}
+
+nav ul li:before {
+    content: '|';
+    margin: 0 1em;
+}
+
+nav a{
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: #382f25;
+	transition: all 0.2s linear;
+}
+
+a:hover,
+a:active,
+a:focus{
+	color: #40b3d6;
 }
 
 img{
@@ -117,7 +143,7 @@ input:not([type="submit"]),
 textarea,
 #image-upload{
 	display: block;
-	border: 1px solid #187bcc;
+	border: 1px solid #fdb970;
 	width: 100%;
 	padding: 0.5em 0.5em;
 	color: #fff;
@@ -138,7 +164,7 @@ input[type="file"]{
 label{
 	margin: 0;
 	text-align: left;
-	color: #b6dbf7;
+	color: #fff;
 	font-size: 1.2em;
 }
 
@@ -192,19 +218,21 @@ th{
 	font-weight: bold;
 	font-size: 1.2em;
 	text-align: center;
-	padding: 0.2	em 0.8em;
+	padding: 0.2em 0.8em;
 	background-color: #ccc;
 }
 
 /*Default classes*/
 
 .image-container{
-	background: #ccc url(../images/aum.jpg) center center;
+	background: #ccc url(../images/audience.jpg) center center;
 	background-size: cover;
+	background-attachment: fixed;
+	padding: 2em 0;
 }
 
 .register{
-	background: rgb(0,0,0,0.6);
+	background: rgb(0,0,0,0.8);
 	padding: 2em 3em;
 	width: 90%;
 	max-width: 700px;
@@ -307,13 +335,13 @@ th{
 
 .links a{
 	font-size: 1.2em;
-	color: #fff;
+	color: #40b3d6;
 	text-decoration: none;
 	transition: all 0.2s linear;	
 }
 
 .links a:hover{
-	color: #b6dbf7;
+	color: #fff;
 }
 
 .links a.new:after{
@@ -326,3 +354,165 @@ th{
 .links li:last-child{
 	float: right;
 }
+
+.intro{
+	padding: 1em;
+}
+
+.intro h2 {
+    font-size: 3em;
+    line-height: 1;
+}
+
+.intro h2:after{
+	border: none;
+}
+
+.intro h3 {
+    font-size: 2em;
+    margin: 1em 0 0.3em;
+}
+
+.intro p strong {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.owl-item.active {
+    position: relative;
+}
+
+.owl-item.active p {
+    position: absolute;
+    color: #fb8200;
+    font-size: 1em;
+    left: 2em;
+    text-align: center;
+    display: block;
+}
+
+.owl-item.active p.bottom {
+    bottom: 1.5em;
+}
+
+.owl-item.active p.top {
+    top: 1em;
+}
+
+header h1 {
+    display: table-cell;
+    margin-left: 2em;
+}
+
+header h1 img {
+    display: inline-block;
+    width: 70px;
+    vertical-align: middle;
+}
+
+header h1 p {
+    display: none;
+    vertical-align: middle;
+    font-size: 0.8em;
+}
+
+header h2 {
+    display: table-cell;
+    width: 200px;
+}
+
+header {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0 3em;
+    background-color: #fff;
+}
+
+header nav {
+    display: none;
+}
+
+.about {
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin: 0 2em;
+    color: #40b3d6;
+}
+
+.about section {
+    display: block;
+    text-align: left;
+    border: 1px solid #fb8506;
+    margin: 2em 4em;
+    border-radius: 5px;
+    padding: 1.5em;
+}
+
+.about section h4 {
+    color: #fb8506;
+    font-size: 1.5em;
+}
+
+.about li p {
+    color: inherit;
+    margin: 1em 0;
+}
+
+.about li p strong {
+    font-weight: bold;
+    width: 240px;
+}
+
+.about li p strong:after {
+    content: ':';
+}
+
+.about li p strong,
+.about li p span {
+    display: inline-block;
+}
+
+.about li p span {
+    width: 130px;
+}
+
+@media only screen and (min-width: 760px) {
+	.home-section {
+	    position: relative;
+	}
+
+	article.intro {
+	    position: absolute;
+	    z-index: 2;
+	    right: 2em;
+	    top: 5em;
+	}
+	.intro {
+    	color: #fff;
+	}
+	.intro h2{
+		font-size: 4em;
+	}
+	.intro h2:after{
+		border: 1px solid;
+	}
+	.owl-item.active p {
+		font-size: 2.5em;
+	}
+	header nav {
+	    display: table-cell;
+	    text-align: right;
+	}
+
+	.about section {
+		display: inline-block;
+	}
+	header h1 p{
+		display: inline-block;
+	}
+}
+
